@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kg's Restaurant Feedback</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="restaurant_logo.png" alt="Restaurant Logo" class="logo">
+      <div>
+        <h1>Kg's Restaurant</h1>
+        <p>Pure Vegetarian • Est. 1995</p>
+      </div>
+    </div>
+    <nav class="nav-buttons">
+      <a href="index.html" class="btn">Back to Home</a>
+    </nav>
+  </header>
+
+  <!-- FEEDBACK FORM -->
+  <section class="form-section">
+    <h2>Customer Feedback</h2>
+    <form id="feedbackForm">
+      <div>
+        <p>1. Taste and quality of food</p>
+        <label><input type="radio" name="option1" value="1">★</label>
+        <label><input type="radio" name="option1" value="2">★★</label>
+        <label><input type="radio" name="option1" value="3">★★★</label>
+        <label><input type="radio" name="option1" value="4">★★★★</label>
+        <label><input type="radio" name="option1" value="5">★★★★★</label>
+      </div>
+
+      <div>
+        <p>2. Presentation of Food</p>
+        <label><input type="radio" name="option2" value="1">★</label>
+        <label><input type="radio" name="option2" value="2">★★</label>
+        <label><input type="radio" name="option2" value="3">★★★</label>
+        <label><input type="radio" name="option2" value="4">★★★★</label>
+        <label><input type="radio" name="option2" value="5">★★★★★</label>
+      </div>
+
+      <div>
+        <p>3. Speed of Service and Courtesy of Staff</p>
+        <label><input type="radio" name="option3" value="1">★</label>
+        <label><input type="radio" name="option3" value="2">★★</label>
+        <label><input type="radio" name="option3" value="3">★★★</label>
+        <label><input type="radio" name="option3" value="4">★★★★</label>
+        <label><input type="radio" name="option3" value="5">★★★★★</label>
+      </div>
+
+      <div>
+        <label for="visit-like">4. What did you enjoy most during your visit?</label><br>
+        <input type="text" name="visit-like" id="visit-like">
+      </div>
+
+      <div>
+        <label for="visit-dislike">5. Was there anything you didn't like?</label><br>
+        <input type="text" name="visit-dislike" id="visit-dislike">
+      </div>
+
+      <div>
+        <p>6. What did you like the most from Dessert Delight?</p>
+        <select name="dessert">
+          <option value="Chef's Special Fudge">Chef's Special Fudge</option>
+          <option value="Chocolate Brownie">Chocolate Brownie</option>
+          <option value="Cheese Blueberry Cake">Cheese Blueberry Cake</option>
+          <option value="Ice Cream Sundae">Ice Cream Sundae</option>
+          <option value="Pull Over Cake">Pull Over Cake</option>
+        </select>
+      </div>
+
+      <br>
+      <input type="submit" value="Submit!">
+      <input type="reset" value="Reset!">
+      <p><mark>Thank you for helping us improve. Your feedback is valuable!</mark></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Contact: kgrestaurant@email.com | 📞 +91-9876543210</p>
+    <p>&copy; 2025 Kg's Restaurant. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Thank you for your feedback!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

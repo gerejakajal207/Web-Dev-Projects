@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f5ec;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d4b483;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.logo {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.veg-badge {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.nav-buttons .btn {
+  background: #fff;
+  color: #5a4632;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 8px;
+  font-weight: 600;
+}
+
+.nav-buttons .btn:hover {
+  background: #f1e2c5;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px;
+  background: #f1e2c5;
+  color: #5a4632;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+/* MENU */
+.menu-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.menu-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5a4632;
+}
+
+.menu-category {
+  margin-bottom: 15px;
+}
+
+.menu-category summary {
+  background: #d4b483;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.menu-category li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f9f5ec;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* FORM */
+.form-section {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #5a4632;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  background: #d4b483;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-section button:hover {
+  background: #c3a06d;
+}
+
+/* FOOTER */
+footer {
+  background: #5a4632;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}

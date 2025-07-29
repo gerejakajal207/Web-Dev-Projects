@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kg's Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-section">
+      <img src="restaurant_logo.png" alt="Restaurant Logo" class="logo">
+      <div>
+        <h1>Kg's Restaurant</h1>
+        <p>Pure Vegetarian • Est. 1995</p>
+      </div>
+      <img class="veg-badge" src="https://www.shutterstock.com/image-illustration/pure-veg-icon-logo-symbol-260nw-2190482501.jpg" alt="Pure Veg">
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="#menu" class="btn">Menu</a>
+      <a href="#reserve" class="btn">Reserve Table</a>
+      <a href="feedback.html" class="btn">Feedback</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Authentic Flavors. Pure Vegetarian.</h2>
+    <p>Enjoy the best dishes in a cozy ambiance.</p>
+  </section>
+
+  <!-- MENU -->
+  <main id="menu" class="menu-container">
+    <h2 class="menu-heading">🍽 Our Menu</h2>
+
+    <details class="menu-category">
+      <summary>Appetizers 🥗</summary>
+      <ul>
+        <li><span>Paneer Tikka</span><span>₹170</span></li>
+        <li><span>Veg Sheekh Kebab</span><span>₹180</span></li>
+        <li><span>Paneer Satay</span><span>₹190</span></li>
+        <li><span>Hara Bara Kebab</span><span>₹150</span></li>
+        <li><span>Corn Cheese Balls</span><span>₹120</span></li>
+      </ul>
+    </details>
+
+    <details class="menu-category">
+      <summary>Mocktails 🍹</summary>
+      <ul>
+        <li><span>Virgin Mojito</span><span>₹120</span></li>
+        <li><span>Blue Lagoon</span><span>₹130</span></li>
+        <li><span>Fruit Punch</span><span>₹140</span></li>
+        <li><span>Strawberry Delight</span><span>₹150</span></li>
+        <li><span>Mango Mule</span><span>₹160</span></li>
+      </ul>
+    </details>
+
+    <details class="menu-category">
+      <summary>Main Course 🍛</summary>
+      <ul>
+        <li><span>Paneer Butter Masala</span><span>₹210</span></li>
+        <li><span>Veg Kolhapuri</span><span>₹180</span></li>
+        <li><span>Dal Tadka</span><span>₹130</span></li>
+        <li><span>Mix Veg Curry</span><span>₹160</span></li>
+        <li><span>Chole Masala</span><span>₹150</span></li>
+        <li><span>Butter Naan</span><span>₹40</span></li>
+        <li><span>Jeera Rice</span><span>₹60</span></li>
+      </ul>
+    </details>
+
+    <details class="menu-category">
+      <summary>Desserts 🍰</summary>
+      <ul>
+        <li><span>Chef's Special Fudge</span><span>₹80</span></li>
+        <li><span>Chocolate Brownie</span><span>₹120</span></li>
+        <li><span>Cheese Blueberry Cake</span><span>₹100</span></li>
+        <li><span>Ice Cream Sundae</span><span>₹130</span></li>
+        <li><span>Pull Over Cake</span><span>₹140</span></li>
+      </ul>
+    </details>
+  </main>
+
+  <!-- RESERVE TABLE -->
+  <section id="reserve" class="form-section">
+    <h2>Reserve a Table</h2>
+    <form id="reserveForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Phone Number" required>
+      <input type="date" required>
+      <input type="time" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <button type="submit">Book Table</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Contact: kgrestaurant@email.com | 📞 +91-9876543210</p>
+    <p>&copy; 2025 Kg's Restaurant. All Rights Reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Reservation validation (1 PM - 1 AM)
+    document.getElementById("reserveForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const timeInput = this.querySelector('input[type="time"]').value;
+      const [hourStr, minuteStr] = timeInput.split(":");
+      const hour = parseInt(hourStr);
+
+      if ((hour >= 13 && hour <= 23) || hour === 0) {
+        alert("✅ Table booked successfully!");
+        this.reset();
+      } else {
+        alert("❌ Booking allowed only between 1 PM and 1 AM.");
+      }
+    });
+  </script>
+
+</body>
+</html>
