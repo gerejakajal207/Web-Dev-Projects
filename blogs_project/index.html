@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blogs</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="menu-container">
+    <ul class="menu">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="AboutUs.html">About Us</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <header class="heading">
+    <h2>The Editor's Picks</h2>
+  </header>
+
+  <main>
+    <!-- Blog 1 -->
+    <article class="blog-card">
+      <section class="blog-content">
+        <h3>The Rise of AI in Everyday Life</h3>
+        <p>
+          Artificial Intelligence is no longer limited to research labs — it’s powering our daily tools. 
+          From voice assistants like Alexa to smart photo editors, AI is shaping how we live. 
+          But with convenience comes ethical questions: how much data are we willing to share for smarter tech?
+        </p>
+      </section>
+      <figure class="blog-image">
+        <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg" alt="Artificial Intelligence illustration">
+      </figure>
+    </article>
+    <section class="reactions">
+      <button class="like" data-count="0">👍</button>
+      <span class="like-count">0</span>
+      <button class="dislike" data-count="0">👎</button>
+      <span class="dislike-count">0</span>
+      <button class="comment">💬</button>
+      <button class="share">🔗</button>
+    </section>
+
+    <!-- Blog 2 -->
+    <article class="blog-card">
+      <section class="blog-content">
+        <h3>Coffee Culture: More Than Just a Drink</h3>
+        <p>
+          Coffee shops have become hubs for creativity, business, and friendships. 
+          Beyond caffeine, coffee culture represents a lifestyle — a break from chaos and a space to connect. 
+          With specialty brews and latte art, coffee is more than a drink; it’s an experience.
+        </p>
+      </section>
+      <figure class="blog-image">
+        <img src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Coffee cup with latte art">
+      </figure>
+    </article>
+    <section class="reactions">
+      <button class="like" data-count="0">👍</button>
+      <span class="like-count">0</span>
+      <button class="dislike" data-count="0">👎</button>
+      <span class="dislike-count">0</span>
+      <button class="comment">💬</button>
+      <button class="share">🔗</button>
+    </section>
+
+    <!-- Blog 3 -->
+    <article class="blog-card">
+      <section class="blog-content">
+        <h3>Travel Smart: Why Solo Trips Are Growing</h3>
+        <p>
+          More people are embracing solo travel as a way to rediscover themselves. 
+          With budget airlines and work-from-anywhere jobs, exploring the world alone has never been easier. 
+          It’s not just about destinations — it’s about personal growth.
+        </p>
+      </section>
+      <figure class="blog-image">
+        <img src="https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg" alt="Traveler walking with backpack">
+      </figure>
+    </article>
+    <section class="reactions">
+      <button class="like" data-count="0">👍</button>
+      <span class="like-count">0</span>
+      <button class="dislike" data-count="0">👎</button>
+      <span class="dislike-count">0</span>
+      <button class="comment">💬</button>
+      <button class="share">🔗</button>
+    </section>
+  </main>
+
+  <script>
+    // Like/Dislike Logic
+    document.querySelectorAll(".like").forEach(likeBtn => {
+      likeBtn.addEventListener("click", () => {
+        let count = parseInt(likeBtn.getAttribute("data-count")) + 1;
+        likeBtn.setAttribute("data-count", count);
+        likeBtn.nextElementSibling.textContent = count;
+      });
+    });
+
+    document.querySelectorAll(".dislike").forEach(dislikeBtn => {
+      dislikeBtn.addEventListener("click", () => {
+        let count = parseInt(dislikeBtn.getAttribute("data-count")) + 1;
+        dislikeBtn.setAttribute("data-count", count);
+        dislikeBtn.nextElementSibling.textContent = count;
+      });
+    });
+  </script>
+</body>
+</html> 
